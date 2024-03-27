@@ -1,0 +1,57 @@
+<div class="dashboard d-flex ">
+    <div class="side-bar shadow">
+        <div class="image shadow bg-light">
+            <img width="100%" [src]="profileURL">
+        </div>
+        <h4 class="text-center text-light shadow p-2">Welcome {{Name}}!!</h4>
+        <!-- <h4 class="text-center text-light ">Informations</h4> -->
+        <div class="details">
+            <ul class="list-group list-group-light list-group-small p-3">
+                <li class="list-group-item">Name: {{Name}} </li>
+                <li class="list-group-item">Age: {{Age}} </li>
+                <li class="list-group-item">Email: {{Email}}</li>
+                <li class="list-group-item">Course: {{Course}}</li>
+                <li class="list-group-item">Status:{{Status}} </li>
+                <p class="mt-2 pt-0 text-white " style="font-size: 11px;"> Click the button 3 times to save data</p>
+                <button (click)="onSave()" class="btn text-center mt-2" style="background-color: rgb(201, 173, 228);">Save</button>
+                <p class="mt-1 text-light pt-0" style="font-size: 11px;">You have clicked {{clickcount}} times.</p>
+            </ul>
+             
+        </div>
+    </div>
+    <div class="row adm">
+        <div class="cola" style="background-color: rgb(143, 98, 185);">
+            <h5 class="text-center text-light mb-4 ">Admission Details</h5>
+      <!-- property binding -->
+            <p [class.myclass]="false">Name : {{Name}}</p>
+            <p  [style.color]="'yellow'">Year : 2024</p>
+            
+        </div>
+        <div class="cola" style="background-color: rgb(192, 75, 184);">
+            <h5 class="text-center text-light mb-4">Course Details</h5>
+            <p [class]="myClass">Course : {{Course}}</p>
+            <p  [class]="myClass">Mentor : T S Das</p>
+        </div>
+        <div class="cola " style="background-color: rgb(195, 138, 248);">
+            <h5 class="text-center text-light mb-4">Mark List</h5>
+            <p [style.color]="msg=='error' ?'yellow':'white'">Linear Algebra : 70</p>
+            <p  [class]="myClass">Statistics : 87</p>
+        </div>
+        <div class="cola" style="background-color: rgb(186, 54, 146);">
+            <h5 class="text-center text-light mb-4">Previous Education</h5>
+            <!-- <input #pedu (keyup) ="keyup(pedu.value)"><br><br> -->
+             <input class="mb-3" type="text" name="value" [(ngModel)]="value">
+            <p [class]="myClass"> {{value}}</p>
+            
+        </div><br>
+         
+        
+
+    </div>
+    
+    
+</div>
+
+<div>
+   
+</div>
